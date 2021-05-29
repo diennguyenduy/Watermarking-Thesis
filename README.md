@@ -20,5 +20,5 @@
 - Trường: Đại học Công Nghệ - ĐHQG Hà Nội
 
 ## Nguồn tham khảo:
-- Thuật toán LSB: được xây dựng và cải tiến dựa trên https://github.com/SiddheshAcharekar/Steganographic-Watermarking-Key-Based/blob/master/Documentation%20(ita).pdf
-- Thuật toán DCT và DWT: được cải tiến dựa trên https://github.com/aishwaryakapse/Audio-and-Image-Watermarking
+- Thuật toán LSB: được xây dựng và cải tiến dựa trên https://github.com/SiddheshAcharekar/Steganographic-Watermarking-Key-Based/blob/master/Documentation%20(ita).pdf và một số tài liệu đã nghiên cứu ở khóa luận.
+- Thuật toán DCT và DWT: được cải tiến dựa trên https://github.com/aishwaryakapse/Audio-and-Image-Watermarking để phù hợp hơn với bài toán đưa ra.

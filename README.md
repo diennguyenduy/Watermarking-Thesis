@@ -3,8 +3,7 @@
 ## Hướng dẫn các bước thực hiện
 - Bước 1: Chạy file `main_menu.m` để mở màn hình chính.
 
-![image](https://user-images.githubusercontent.com/38159404/120024412-5d7b2900-c019-11eb-9732-1501a73a1710.png)
-
+![image](https://user-images.githubusercontent.com/38159404/120072436-1e52e380-c0be-11eb-8500-ccb33c793ddd.png)
 
 - Bước 2: Chọn phần `Nhúng thủy vân` để mở màn hình và thực hiện quá trình nhúng thủy vân bằng các thuật toán LSB - DWT - DCT.
 

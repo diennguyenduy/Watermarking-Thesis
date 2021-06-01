@@ -220,3 +220,17 @@ function secretkey_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
+
+% --- Executes on button press in resetstate.
+function resetstate_Callback(hObject, eventdata, handles)
+
+axes(handles.axes1); % Make averSpec the current axes.
+cla reset; % Do a complete and total reset of the axes.
+axes(handles.axes2); % Make averSpec the current axes.
+cla reset; % Do a complete and total reset of the axes.
+axes(handles.axes3); % Make averSpec the current axes.
+cla reset; % Do a complete and total reset of the axes.
+set(handles.secretkey,'String','');
+set(handles.embtime,'String','');
+set(handles.watermarkedpsnr,'String','');

@@ -66,6 +66,8 @@ axes(handles.axes3);
 imshow(watermark);
 title("Thủy vân trích xuất được");
 
+handles.extwatermark = watermark;
+
 
 % --- Executes on button press in extalgo.
 function extalgo_Callback(hObject, eventdata, handles)
@@ -179,3 +181,19 @@ else
     warndlg('Please Select the necessary Image File');
 end
 guidata(hObject,handles);
+
+
+% --- Executes on button press in reset.
+function reset_Callback(hObject, eventdata, handles)
+
+axes(handles.axes2); % Make averSpec the current axes.
+cla reset; % Do a complete and total reset of the axes.
+axes(handles.axes3); % Make averSpec the current axes.
+cla reset; % Do a complete and total reset of the axes.
+axes(handles.axes4); % Make averSpec the current axes.
+cla reset; % Do a complete and total reset of the axes.
+axes(handles.axes5); % Make averSpec the current axes.
+cla reset; % Do a complete and total reset of the axes.
+set(handles.text13,'String','');
+set(handles.exttime,'String','');
+set(handles.ncc,'String','');

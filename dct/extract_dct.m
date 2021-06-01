@@ -50,7 +50,7 @@ for x = 1:r
         c1 = 1;
         c2 = 8;
     end
-     op(:,:,x) = im2uint8(two_D(w,watermark_h,watermark_w));
+    op(:,:,x) = im2uint8(two_D(w,watermark_h,watermark_w));
 end
 
 recover_watermark = op;

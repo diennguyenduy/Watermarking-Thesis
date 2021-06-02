@@ -1,25 +1,30 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration file="C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\App\watermarking.prj" location="C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\App" name="watermarking" target="target.ezdeploy.standalone" target-name="Application Compiler">
-    <param.appname>watermarking</param.appname>
-    <param.icon />
-    <param.icons />
+  <configuration file="C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\Demo.prj" location="C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis" name="Demo" preferred-package-location="C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\Demo\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>Demo</param.appname>
+    <param.icon>${PROJECT_ROOT}\Demo_resources\icon.ico</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\Demo_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\Demo_resources\icon_32.png</file>
+      <file>${PROJECT_ROOT}\Demo_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\Demo_resources\icon_16.png</file>
+    </param.icons>
     <param.version>1.0</param.version>
-    <param.authnamewatermark>dien</param.authnamewatermark>
+    <param.authnamewatermark>Dien Nguyen Duy</param.authnamewatermark>
     <param.email>diennd.vnu@gmail.com</param.email>
-    <param.company />
+    <param.company>UET-VNU</param.company>
     <param.summary />
     <param.description />
     <param.screenshot />
     <param.guid />
-    <param.installpath.string>\watermarking\</param.installpath.string>
+    <param.installpath.string>\UET-VNU\Demo\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
-    <param.logo>C:\Users\dienn\OneDrive\Máy tính\File\Images\100px-Logo_HUET.png</param.logo>
+    <param.logo />
     <param.install.notes />
     <param.target.install.notes />
-    <param.intermediate>${PROJECT_ROOT}\watermarking\for_testing</param.intermediate>
-    <param.files.only>${PROJECT_ROOT}\watermarking\for_redistribution_files_only</param.files.only>
-    <param.output>${PROJECT_ROOT}\watermarking\for_redistribution</param.output>
-    <param.logdir>${PROJECT_ROOT}\watermarking</param.logdir>
+    <param.intermediate>${PROJECT_ROOT}\Demo\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\Demo\for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}\Demo\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\Demo</param.logdir>
     <param.enable.clean.build>false</param.enable.clean.build>
     <param.user.defined.mcr.options />
     <param.target.type>subtarget.standalone</param.target.type>
@@ -43,16 +48,14 @@
 	 -?  print help on how to use the application 
 	 varargin  input arguments</param.help.text>
     <unset>
-      <param.icon />
-      <param.icons />
       <param.version />
-      <param.company />
       <param.summary />
       <param.description />
       <param.screenshot />
       <param.guid />
       <param.installpath.string />
       <param.installpath.combo />
+      <param.logo />
       <param.install.notes />
       <param.target.install.notes />
       <param.intermediate />
@@ -77,34 +80,34 @@
       <param.example />
     </unset>
     <fileset.main>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\main_menu.m</file>
+      <file>${PROJECT_ROOT}\main_menu.m</file>
     </fileset.main>
     <fileset.resources />
     <fileset.package />
     <fileset.depfun>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\attack.fig</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\attack.m</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\dct\embed_dct.m</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\dct\extract_dct.m</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\dewatermark.fig</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\dewatermark.m</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\dwt\embed_dwt.m</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\dwt\extract_dwt.m</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\function\one_D.m</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\function\save_image.m</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\function\two_D.m</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\key.txt</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\lsb\embed_lsb.m</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\lsb\extract_lsb.m</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\main_menu.fig</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\watermark.fig</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\watermark.m</file>
-      <file>C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\watermark_info.txt</file>
+      <file>${PROJECT_ROOT}\attack.fig</file>
+      <file>${PROJECT_ROOT}\attack.m</file>
+      <file>${PROJECT_ROOT}\dct\embed_dct.m</file>
+      <file>${PROJECT_ROOT}\dct\extract_dct.m</file>
+      <file>${PROJECT_ROOT}\dewatermark.fig</file>
+      <file>${PROJECT_ROOT}\dewatermark.m</file>
+      <file>${PROJECT_ROOT}\dwt\embed_dwt.m</file>
+      <file>${PROJECT_ROOT}\dwt\extract_dwt.m</file>
+      <file>${PROJECT_ROOT}\function\one_D.m</file>
+      <file>${PROJECT_ROOT}\function\save_image.m</file>
+      <file>${PROJECT_ROOT}\function\two_D.m</file>
+      <file>${PROJECT_ROOT}\key.txt</file>
+      <file>${PROJECT_ROOT}\lsb\embed_lsb.m</file>
+      <file>${PROJECT_ROOT}\lsb\extract_lsb.m</file>
+      <file>${PROJECT_ROOT}\main_menu.fig</file>
+      <file>${PROJECT_ROOT}\watermark.fig</file>
+      <file>${PROJECT_ROOT}\watermark.m</file>
+      <file>${PROJECT_ROOT}\watermark_info.txt</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\watermarking\for_testing" name="splash.png" optional="false">C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\App\watermarking\for_testing\splash.png</file>
-      <file location="${PROJECT_ROOT}\watermarking\for_testing" name="readme.txt" optional="true">C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\App\watermarking\for_testing\readme.txt</file>
-      <file location="${PROJECT_ROOT}\watermarking\for_testing" name="watermarking.exe" optional="false">C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\App\watermarking\for_testing\watermarking.exe</file>
+      <file location="${PROJECT_ROOT}\Demo\for_testing" name="splash.png" optional="false">C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\Demo\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\Demo\for_testing" name="readme.txt" optional="true">C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\Demo\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\Demo\for_testing" name="Demo.exe" optional="false">C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\Demo\for_testing\Demo.exe</file>
     </build-deliverables>
     <workflow />
     <matlab>
@@ -115,8 +118,8 @@
         <toolbox name="gpucoder" />
         <toolbox name="fixedpoint" />
         <toolbox name="matlabhdlcoder" />
-        <toolbox name="neuralnetwork" />
         <toolbox name="polyspacebugfinder" />
+        <toolbox name="neuralnetwork" />
       </toolboxes>
       <toolbox>
         <matlabcoder>
@@ -144,14 +147,14 @@
         </matlabhdlcoder>
       </toolbox>
       <toolbox>
-        <neuralnetwork>
-          <enabled>true</enabled>
-        </neuralnetwork>
-      </toolbox>
-      <toolbox>
         <polyspacebugfinder>
           <enabled>true</enabled>
         </polyspacebugfinder>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
       </toolbox>
     </matlab>
     <platform>

@@ -12,8 +12,8 @@ watermarked_img = varargin{1};
 %Lẩy ảnh gốc và thực hiện biến đổi
 img = varargin{2};
 img = double(img);
-
 [~, ~, r] = size(img); % r: số channel màu của ảnh - (RGB : 3)
+
 weight = 0.01;
 
 for channel = 1:r
@@ -25,7 +25,7 @@ for channel = 1:r
     [w_ca,~,~,~] = dwt2(watermarked_img(:,:,channel),'haar');
     [w_caa,w_cha,w_cva,w_cda] = dwt2(w_ca,'haar');
     n1(:,:,channel) = [w_caa,w_cha;w_cva,w_cda];
-    
+
     recover(:,:,channel) = n1(:,:,channel) - y;
     recover(:,:,channel) = recover(:,:,channel)/weight;
 end

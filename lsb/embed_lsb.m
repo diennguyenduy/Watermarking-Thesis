@@ -2,9 +2,9 @@ function varargout = embed_lsb(varargin)
 
 key = varargin{3};
 rng(key);	%the seed is any non-negative integer < 2^32
-%rng thay đổi trạng thái của generator giúp việc sinh ra các dãy random trả về cùng 1 kết quả khi có cùng seed (ở đây là key)
+%rng thay đổi trạng thái của generator giúp việc sinh ra các dãy random trả về cùng 1 kết quả khi có cùng seed
 
-%Lưu khóa vào file key.txt
+%Lưu khóa nhúng
 keyfile = fopen('key.txt', 'w');
 fprintf(keyfile,'%d',varargin{3});
 fclose(keyfile);

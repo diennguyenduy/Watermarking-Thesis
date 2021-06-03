@@ -109,38 +109,38 @@ title('Ảnh sau khi nhúng')
 
 
 % --- Lựa chọn thuật toán nhúng thủy vân
-function lsbbutton_Callback(hObject, eventdata, handles)
+function lsbbutton_Callback(~, ~, ~)
 global emb_algorithm;
 emb_algorithm = 'lsb';
 
-function dctbutton_Callback(hObject, eventdata, handles)
+function dctbutton_Callback(~, ~, ~)
 global emb_algorithm;
 emb_algorithm = 'dct';
 
-function dwtbutton_Callback(hObject, eventdata, handles)
+function dwtbutton_Callback(~, ~, ~)
 global emb_algorithm;
 emb_algorithm = 'dwt';
 
-function btn_insertwatermark_CreateFcn(hObject, eventdata, handles)
+function btn_insertwatermark_CreateFcn(~, ~, ~)
 
-function rbtext_CreateFcn(hObject, eventdata, handles)
+function rbtext_CreateFcn(~, ~, ~)
 
-function rbimage_CreateFcn(hObject, eventdata, handles)
+function rbimage_CreateFcn(~, ~, ~)
 
-function outputimage_CreateFcn(hObject, eventdata, handles)
+function outputimage_CreateFcn(hObject, ~, ~)
 
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
 
-function rbpng_CreateFcn(hObject, eventdata, handles)
+function rbpng_CreateFcn(~, ~, ~)
 
-function outputimage_Callback(hObject, eventdata, handles)
+function outputimage_Callback(~, ~, ~)
 
-function embtime_Callback(hObject, eventdata, handles)
+function embtime_Callback(~, ~, ~)
 
 % --- Executes during object creation, after setting all properties.
-function embtime_CreateFcn(hObject, eventdata, handles)
+function embtime_CreateFcn(hObject, ~, ~)
 
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
@@ -148,9 +148,9 @@ end
 
 
 % --- Executes on button press in pushbutton4.
-function pushbutton4_Callback(hObject, eventdata, handles)
+function pushbutton4_Callback(hObject, ~, handles)
 
-[fname path]=uigetfile('*.png;*.bmp;*.tif;*.jpg','Chọn ảnh gốc');
+[fname, path]=uigetfile('*.png;*.bmp;*.tif;*.jpg','Chọn ảnh gốc');
 if fname~=0
     img = imread([path,fname]);
     try
@@ -168,7 +168,7 @@ guidata(hObject,handles);
 
 
 % --- Executes during object creation, after setting all properties.
-function key_CreateFcn(hObject, eventdata, handles)
+function key_CreateFcn(hObject, ~, ~)
 
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
@@ -176,11 +176,11 @@ end
 
 
 % --- Executes on button press in pushbutton6.
-function pushbutton6_Callback(hObject, eventdata, handles)
+function pushbutton6_Callback(hObject, ~, handles)
 % hObject    handle to pushbutton6 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-[fname path]=uigetfile('*.png;*.bmp;*.tif;*.jpg','Chọn thủy vân');
+[fname, path]=uigetfile('*.png;*.bmp;*.tif;*.jpg','Chọn thủy vân');
 if fname~=0
     watermark = imread([path,fname]);
     
@@ -198,7 +198,7 @@ end
 guidata(hObject,handles);
 
 
-function figure1_CloseRequestFcn(hObject, eventdata, handles)
+function figure1_CloseRequestFcn(hObject, ~, ~)
 
 clear global ext_out
 clear global w_type
@@ -206,11 +206,12 @@ clear global emb_algorithm
 
 delete(hObject);
 
-function secretkey_Callback(hObject, eventdata, handles)
+
+function secretkey_Callback(~, ~, ~)
 
 
 % --- Executes during object creation, after setting all properties.
-function secretkey_CreateFcn(hObject, eventdata, handles)
+function secretkey_CreateFcn(hObject, ~, ~)
 
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
@@ -218,7 +219,7 @@ end
 
 
 % --- Executes on button press in resetstate.
-function resetstate_Callback(hObject, eventdata, handles)
+function resetstate_Callback(~, ~, handles)
 
 axes(handles.axes1); % Make averSpec the current axes.
 cla reset; % Do a complete and total reset of the axes.

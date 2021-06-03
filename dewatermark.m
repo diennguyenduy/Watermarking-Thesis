@@ -17,6 +17,7 @@ else
     gui_mainfcn(gui_State, varargin{:});
 end
 
+
 function dewatermark_OpeningFcn(hObject, ~, handles, varargin)
 
 handles.output = hObject;
@@ -66,24 +67,16 @@ axes(handles.axes3);
 imshow(watermark);
 title("Thủy vân trích xuất được");
 
-handles.extwatermark = watermark;
-
-
-% --- Executes on button press in extalgo.
+% --- Lựa chọn thuật toán trích xuất thủy vân
 function extalgo_Callback(hObject, eventdata, handles)
-
 global ext_algorithm
 ext_algorithm = 'lsb';
 
-% --- Executes on button press in dct_ext_algo.
 function dct_ext_algo_Callback(hObject, eventdata, handles)
-
 global ext_algorithm
 ext_algorithm = 'dct';
 
-% --- Executes on button press in dwt_ext_algo.
 function dwt_ext_algo_Callback(hObject, eventdata, handles)
-
 global ext_algorithm
 ext_algorithm = 'dwt';
 
@@ -94,7 +87,8 @@ clear global ext_algorithm
 
 delete(hObject);
 
-% --- Executes on button press in pushbutton3.
+
+% --- Chọn ảnh đã chứa thủy vân và cần trích xuất
 function pushbutton3_Callback(hObject,~, handles)
 
 global ext_algorithm;
@@ -145,7 +139,7 @@ end
 guidata(hObject,handles);
 
 
-% --- Executes on button press in pushbutton4.
+% --- Chọn thư mục chứa khóa đã lưu để thực hiện trích xuất
 function pushbutton4_Callback(hObject,~, handles)
 
 [fname, path] = uigetfile({'*.txt'},'Chọn file khóa');
@@ -161,7 +155,7 @@ end
 guidata(hObject,handles);
 
 
-% --- Executes on button press in pushbutton5.
+% --- Chọn ảnh gốc để thực hiện quá trình trích xuất (Cho thuật toán DCT và DWT)
 function pushbutton5_Callback(hObject, ~, handles)
 
 [fname, path] = uigetfile('*.png;*.bmp;*.tif;*.jpg','Chọn ảnh gốc');
@@ -184,7 +178,7 @@ guidata(hObject,handles);
 
 
 % --- Executes on button press in reset.
-function reset_Callback(hObject, eventdata, handles)
+function reset_Callback(~, ~, handles)
 
 axes(handles.axes2); % Make averSpec the current axes.
 cla reset; % Do a complete and total reset of the axes.
@@ -194,4 +188,3 @@ axes(handles.axes4); % Make averSpec the current axes.
 cla reset; % Do a complete and total reset of the axes.
 set(handles.text13,'String','');
 set(handles.exttime,'String','');
-set(handles.ncc,'String','');

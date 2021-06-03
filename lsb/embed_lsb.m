@@ -49,7 +49,7 @@ while k < len                       %Xét từng điểm ảnh thứ k của th�
             im(p(index)) = bitset(im(p(index)),1); %Set bit ở vị trí thứ 1 (LSB) của pixel đang xét trên ảnh gốc là 1
         end
     end
-    
+
     [x,y,z] = size(cover_image);
     varargout{1} = reshape(im,x,y,z);
 end

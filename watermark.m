@@ -55,20 +55,20 @@ end
 
 function txtinsert_watermark_Callback(hObject, eventdata, handles)
 
-function txtinsert_watermark_CreateFcn(hObject, eventdata, handles)
+function txtinsert_watermark_CreateFcn(hObject, ~, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
 
-function slider2_Callback(hObject, eventdata, handles)
+function slider2_Callback(~, ~, ~)
 
-function slider2_CreateFcn(hObject, eventdata, handles)
+function slider2_CreateFcn(hObject, ~, ~)
 if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor',[.9 .9 .9]);
 end
 
 
-function btn_insertwatermark_Callback(hObject, eventdata, handles)
+function btn_insertwatermark_Callback(~, ~, handles)
 
 global emb_algorithm;
 
@@ -108,21 +108,16 @@ imshow(watermarked);
 title('Ảnh sau khi nhúng')
 
 
-% --- Executes on button press in lsbbutton.
+% --- Lựa chọn thuật toán nhúng thủy vân
 function lsbbutton_Callback(hObject, eventdata, handles)
-
 global emb_algorithm;
 emb_algorithm = 'lsb';
 
-% --- Executes on button press in dctbutton.
 function dctbutton_Callback(hObject, eventdata, handles)
-
 global emb_algorithm;
 emb_algorithm = 'dct';
 
-% --- Executes on button press in dwtbutton.
 function dwtbutton_Callback(hObject, eventdata, handles)
-
 global emb_algorithm;
 emb_algorithm = 'dwt';
 

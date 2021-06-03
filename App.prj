@@ -1,30 +1,30 @@
 <deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
-  <configuration file="C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\Demo.prj" location="C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis" name="Demo" preferred-package-location="C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\Demo\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+  <configuration file="C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\App.prj" location="C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis" name="App" target="target.ezdeploy.standalone" target-name="Application Compiler">
     <param.appname>Demo</param.appname>
-    <param.icon>${PROJECT_ROOT}\Demo_resources\icon.ico</param.icon>
+    <param.icon>${PROJECT_ROOT}\App_resources\icon.ico</param.icon>
     <param.icons>
-      <file>${PROJECT_ROOT}\Demo_resources\icon_48.png</file>
-      <file>${PROJECT_ROOT}\Demo_resources\icon_32.png</file>
-      <file>${PROJECT_ROOT}\Demo_resources\icon_24.png</file>
-      <file>${PROJECT_ROOT}\Demo_resources\icon_16.png</file>
+      <file>${PROJECT_ROOT}\App_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\App_resources\icon_32.png</file>
+      <file>${PROJECT_ROOT}\App_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\App_resources\icon_16.png</file>
     </param.icons>
     <param.version>1.0</param.version>
     <param.authnamewatermark>Dien Nguyen Duy</param.authnamewatermark>
     <param.email>diennd.vnu@gmail.com</param.email>
-    <param.company>UET-VNU</param.company>
+    <param.company>UET</param.company>
     <param.summary />
     <param.description />
-    <param.screenshot />
+    <param.screenshot>C:\Users\dienn\OneDrive\Máy tính\ed23685339ada1b6d88008cbe1a11e98.gif</param.screenshot>
     <param.guid />
-    <param.installpath.string>\UET-VNU\Demo\</param.installpath.string>
+    <param.installpath.string>\UET\Demo\</param.installpath.string>
     <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
     <param.logo />
     <param.install.notes />
     <param.target.install.notes />
-    <param.intermediate>${PROJECT_ROOT}\Demo\for_testing</param.intermediate>
-    <param.files.only>${PROJECT_ROOT}\Demo\for_redistribution_files_only</param.files.only>
-    <param.output>${PROJECT_ROOT}\Demo\for_redistribution</param.output>
-    <param.logdir>${PROJECT_ROOT}\Demo</param.logdir>
+    <param.intermediate>${PROJECT_ROOT}\App\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\App\for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}\App\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\App</param.logdir>
     <param.enable.clean.build>false</param.enable.clean.build>
     <param.user.defined.mcr.options />
     <param.target.type>subtarget.standalone</param.target.type>
@@ -51,7 +51,6 @@
       <param.version />
       <param.summary />
       <param.description />
-      <param.screenshot />
       <param.guid />
       <param.installpath.string />
       <param.installpath.combo />
@@ -105,9 +104,9 @@
       <file>${PROJECT_ROOT}\watermark_info.txt</file>
     </fileset.depfun>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}\Demo\for_testing" name="splash.png" optional="false">C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\Demo\for_testing\splash.png</file>
-      <file location="${PROJECT_ROOT}\Demo\for_testing" name="readme.txt" optional="true">C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\Demo\for_testing\readme.txt</file>
-      <file location="${PROJECT_ROOT}\Demo\for_testing" name="Demo.exe" optional="false">C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\Demo\for_testing\Demo.exe</file>
+      <file location="${PROJECT_ROOT}\App\for_testing" name="readme.txt" optional="true">C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\App\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\App\for_testing" name="Demo.exe" optional="false">C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\App\for_testing\Demo.exe</file>
+      <file location="${PROJECT_ROOT}\App\for_testing" name="splash.png" optional="false">C:\Users\dienn\OneDrive\Máy tính\Watermarking-Thesis\App\for_testing\splash.png</file>
     </build-deliverables>
     <workflow />
     <matlab>

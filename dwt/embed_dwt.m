@@ -18,7 +18,7 @@ watermark_img = varargin{2};
 watermark = imresize(watermark_img,[p/2 q/2]);
 watermark = double(watermark);
 
-weight = 0.01; %Hệ số nhúng
+heso   = 0.01; %Hệ số nhúng
 height = p/4;
 width  = q/4;
 
@@ -28,7 +28,7 @@ for channel = 1:r
     [ca2,ch2,cv2,cd2] = dwt2(ca,'haar');            %Biến đổi wavelet mức 2 cho dải tần phụ ca
     y = [ca2 ch2;cv2 cd2];
     %disp(size(y));    %[256 256] %Cùng kích thước với thủy vân
-    Watermarked = y + weight*watermark(:,:,channel);
+    Watermarked = y + heso*watermark(:,:,channel);
     for i = 1:height
         for j = 1:width
             marked_ca2(i,j) = Watermarked(i,j);
